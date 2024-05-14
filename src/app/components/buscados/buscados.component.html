@@ -1,0 +1,18 @@
+<h1 class="animate__animated animate__bounce">Encontrados: <small>{{n}}</small></h1>
+<hr>
+
+<div class="row row-cols-md-3">
+    <div class="col" *ngFor="let heroe of heroesEncontrados; let i = index;">
+        
+        <div class="card mb-3">
+            <img src={{heroe.img}} class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">{{heroe.nombre}}</h5>
+                <p class="card-text">{{heroe.bio}}</p>
+                <button (click)="verHeroe(i)" type="button" class="btn btn-primary">Ver Más</button>
+                <p class="card-text"><small class="text-body-secondary">{{heroe.aparicion}}</small></p>
+            </div>
+        </div>
+
+    </div>
+</div>
